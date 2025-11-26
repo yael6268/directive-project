@@ -1,0 +1,9 @@
+<h2>event works</h2><br>
+<button (click)="clickButton()">לחץ עלי</button>
+<br>{{name}}
+<input type="text" (keyup)="keyName($event)"  (keyup.enter)="send()">
+<br><br>
+
+
+<input type="text" #box (keyup)="0">
+{{box.value}}
