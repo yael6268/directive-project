@@ -1,0 +1,20 @@
+<!-- <p>child works!</p>
+
+<h3>{{name1}}</h3>
+
+<h4>{{age}}</h4> -->
+<div [ngStyle]="{'background-color':taskDetails.status == 'חדש'?'yellow':taskDetails.status == 'בביצוע'?'green':'gray'}"  class="task">
+    <h1>{{taskDetails.description}}</h1><br>
+    <h3>{{taskDetails.status}}</h3>
+    <h3 *ngIf="taskDetails.isUgercy">דחוף</h3>
+    <h3 *ngIf="taskDetails.isUgercy==false">לא דחוף </h3><br>
+    <button (click)="changeStatus()">סטאטוס הבא</button>
+    <br><br><br>
+    -------------------
+    <br><br><br>
+    {{second}}<br>
+    <button (click)="start()">התחל</button><br>
+    <button (click)="stop()">עצור</button><br>
+   
+
+</div>
